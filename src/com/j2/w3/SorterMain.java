@@ -1,6 +1,6 @@
 package com.j2.w3;
 
-public class SorterMainV2 {
+public class SorterMain {
   public static void main(String[] args) {
     String[] B={"John", "Adam", "Skrien", "Smith", "Jones"};
     Comparator stringComp=new StringComparator();
@@ -10,16 +10,10 @@ public class SorterMainV2 {
     Comparator integerComp=new IntegerComparator();
     Sorter.sort(C, integerComp);
     
-    Integer[] D = {new Integer(3), new Integer(1), new Integer(4), new Integer(2)};
-    Comparator dateComp=new DateComparator();
-    Sorter.sort(D, dateComp);
-    
     for(int i=0;i<B.length;i++)
       System.out.println("B["+i+"]="+B[i]);
     for(int i=0;i<C.length;i++)
       System.out.println("C["+i+"]="+C[i]);
-    for(int i=0;i<D.length;i++)
-      System.out.println("D["+i+"]="+D[i]);
   }
 }
     
@@ -59,19 +53,3 @@ class StringComparator implements Comparator {
     return ((String)o1).compareTo((String)o2);
   }
 }
-
-class DateComparator implements Comparator {
-    public DateComparator() {}
-    public int compare(Object o1, Object o2) {
-      return ((Date) o1).compareTo((Date) o2);
-    }
-}
-
-class ReverseComparator implements Comparator {
-    private final Comparator c;
-    public ReverseComparator(Comparator c) {this.c = c; }
-    public int compare(Object o1, Object o2) {
-        return c.compare(o2, o1);
-    }
-}
-
