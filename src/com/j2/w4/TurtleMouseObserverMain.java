@@ -8,9 +8,7 @@ import ch.aplu.turtle.*;
   
 class TurtleMouseListener extends Turtle {
   public TurtleMouseListener() {
-    TurtleMouseAdapter tka = new TurtleMouseAdapter();
     addMouseListener(new MouseAdapter() {
-      class TurtleMouseAdapter extends MouseAdapter {
         public void mousePressed(MouseEvent e) {
           Point2D.Double p;
           // p=e.getPoint();
@@ -21,8 +19,7 @@ class TurtleMouseListener extends Turtle {
           forward(d);
           setStatusText("moving to "+p.toString());
         }
-      }
-    });
+      });
     addMouseMotionListener(new MouseMotionAdapter() {
       public void mouseDragged(MouseEvent e) {
         Point2D.Double p;

@@ -9,7 +9,6 @@ class TurtleKeyListener extends Turtle {
   public TurtleKeyListener() {
     TurtleKeyAdapter tka = new TurtleKeyAdapter();
     addKeyListener(new KeyAdapter() {
-      class TurtleKeyAdapter extends KeyAdapter {
         public void keyPressed(KeyEvent e) {
           int keyCode=e.getKeyCode();
           switch(keyCode) {
@@ -32,7 +31,6 @@ class TurtleKeyListener extends Turtle {
             case KeyEvent.VK_Q:
               setStatusText("Q Pressed and Exiting");
               break;
-          }
         }
       }
     });
