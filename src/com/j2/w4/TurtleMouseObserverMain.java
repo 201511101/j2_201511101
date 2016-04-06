@@ -1,6 +1,7 @@
 package com.j2.w4;
 
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
 import ch.aplu.turtle.*;
