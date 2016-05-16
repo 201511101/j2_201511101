@@ -1,6 +1,6 @@
-package com.j2.w11;
+package com.j2.w10;
 
-public class HomeTheaterTestDriver {
+public class HomeTheaterTestDrive {
   public static void main(String[] args) {
     Amplifier amp = new Amplifier("MY AMP");
     Tuner tuner = new Tuner("MY TUNER", amp);
