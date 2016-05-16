@@ -6,6 +6,11 @@ public class Barista {
     tea.prepareRecipe();
     Coffee coffee = new Coffee();
     coffee.prepareRecipe();
+    
+    TeaWithHook teaHook = new TeaWithHook();
+    teaHook.prepareRecipe();
+    CoffeeWithHook coffeeHook = new CoffeeWithHook();
+    coffeeHook.prepareRecipe();
   }
 }
 

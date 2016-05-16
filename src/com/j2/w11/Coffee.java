@@ -1,27 +1,12 @@
 package com.j2.w11;
+import java.io.*;
 
-public class Coffee {
-  void prepareRecipe() {
-    boilWater();
-    brewCoffeeGrinds();
-    pourInCup();
-    addSugarAndMilk();
-  }
-  
-  public void boilWater() {
-    System.out.println("Boiling Water");
-  }
-  
-  public void brewCoffeeGrinds() {
+public class Coffee extends CaffeineBeverage {
+  public void brew() {
     System.out.println("Brewing Coffee");
   }
   
-  public void pourInCup() {
-    System.out.println("Pouring in Cup");
-  }
-  
-  public void addSugarAndMilk() {
+  public void addCondiments() {
     System.out.println("Add Sugar and Milk");
   }
 }
-
